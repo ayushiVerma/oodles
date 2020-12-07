@@ -1,0 +1,110 @@
+/*
+   | Mainly used for center-aligning the span vertically
+*/
+
+.vertically-center{
+  display: flex !important;
+  align-items: center !important;
+}
+
+.vertically-align-middle{
+  vertical-align: middle !important;
+}
+
+.vertically-align-bottom{
+  vertical-align: bottom !important;
+}
+
+.vertically-align-text-top{
+  vertical-align: text-top;
+}
+
+.fs-10{
+  font-size: 10px !important;
+}
+
+.fs-12{
+  font-size: 12px !important;
+}
+
+.fs-13{
+  font-size: 13px !important;
+}
+
+.fs-14{
+  font-size: 14px !important;
+}
+
+
+.fs-16{
+  font-size: 16px !important;
+}
+
+.fs-18{
+  font-size: 18px !important;
+}
+
+
+.fs-20{
+  font-size: 20px !important;
+}
+
+.fs-22{
+  font-size: 22px !important;
+}
+
+.fs-28{
+  font-size: 28px !important;
+}
+
+.fs-24{
+  font-size: 24px !important;
+}
+
+.fs-36{
+  font-size: 36px !important;
+}
+
+.fs-30{
+  font-size: 30px !important;
+}
+
+.fs-64{
+  font-size: 64px !important;
+}
+
+
+/*  Width*/
+.width-100{
+  width: 100% !important;
+}
+.width-90{
+  width: 90% !important;
+}
+.width-40{
+  width: 40% !important;
+}
+.width-79{
+  width: 79% !important;
+}
+.width-100px{
+  width: 100px;
+}
+.width-130px{
+  width: 130px;
+}
+.width-160px{
+  width: 160px;
+}
+
+.opacity-low{
+  opacity: 0.5 !important;
+}
+
+.opacity-normal{
+  opacity: 1 !important;
+}
+
+.cursor-pointer{
+  cursor: pointer !important;
+}

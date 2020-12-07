@@ -1,0 +1,87 @@
+@import "colors";
+
+/*
+ Mixins for heading
+*/
+
+@mixin common-text{
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0.07px;
+}
+
+@mixin headings{
+  @include common-text;
+  color: $text_color_grey_mid;
+}
+
+@mixin major-heading{
+  //font-size: 28px;
+  @include fluid-type(20px, 28px);
+  color : $text_color_dark;
+  font-weight: 700;
+}
+
+@mixin minor-heading{
+  @include headings;
+  @include fluid-type(16px, 18px,768px,1200px);
+  //font-size: 18px;
+}
+
+@mixin desc-heading{
+  @include headings;
+  font-weight: 600;
+  @include fluid-type(14px, 16px,768px,1200px);
+  //font-size: 18px;
+}
+
+
+@mixin help-text{
+  @include common-text;
+  font-size: 14px;
+  color: $text_color_grey_light;
+  a{
+    color: $text_color_grey_light !important;
+    text-decoration: underline !important;
+  }
+}
+
+@mixin linked-help-text{
+  @include help-text;
+  a {
+    color: $primary !important;
+    text-decoration: none !important;
+  }
+}
+
+@mixin slow-transition{
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+@mixin image-center{
+  display:block;
+  margin:auto !important;
+}
+
+
+
+/*
+* Mixin for calculating the Responsive Font-size which calculates  as:  + vh to allow text to be fluid between minimum.
+*/
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+
+  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range){
+    font-size: $max-font-size;
+  }
+}
+
+

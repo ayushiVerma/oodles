@@ -1,0 +1,30 @@
+@import "theme/colors";
+@import "theme/sidebar";
+@import "theme/mixins";
+@import "theme/header";
+@import "theme/footer";
+@import "theme/spaces";
+@import "theme/main";
+
+
+/**
+ * Import bootstrap
+ */
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+.row{
+  margin: 0 !important;
+}
+
+.visible-md-and-lg{
+  @extend .d-md-block, .d-sm-none, .d-none;
+}
+
+.visible-sm-and-xs{
+  @extend .d-block, .d-sm-block, .d-md-none ;
+}

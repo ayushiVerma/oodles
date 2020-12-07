@@ -1,0 +1,30 @@
+.nav-item.active{
+  background-color: $light_icons;
+  a{
+    color: $activeLink !important;
+  }
+}
+
+.header{
+  .material-icons{
+    color:  $activeLink !important;
+  }
+
+  ul > li.nav-item{
+    padding: 1%;
+  }
+
+  li > p{
+    width: 75px;
+    margin-top: 15%;
+  }
+
+}
+
+.header{
+  border-bottom: 1px solid $light-grey;
+
+  .nav-link.is-active{
+    color: #1d27a2 !important;
+  }
+}

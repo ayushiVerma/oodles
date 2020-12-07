@@ -1,0 +1,16 @@
+.dashboard-wrapper{
+  border: solid 25px #80808052;
+  height: 75vh;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .horizontal-li {
+    display: inline-block !important;
+    li {
+      display: inline-block !important;
+    }
+  }
+
+}

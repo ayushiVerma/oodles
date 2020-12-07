@@ -1,0 +1,36 @@
+<div class="row pt-4">
+  <div class="col-md-2 col-sm-12 col-12 mb-2">
+
+    <span class="px-2">{{defaultData.name}}</span>
+    <span class="px-2">{{defaultData.details}}</span>
+    <span class="px-2">{{defaultData.subDetails}}</span>
+
+  </div>
+  <div class="col-md-2 col-sm-12 col-12 mb-2" *ngIf="defaultData.isSearchVisible">
+
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search...">
+      <div class="input-group-append">
+        <span class="input-group-text">
+        <i class="material-icons">search</i></span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-3  col-sm-12 col-12 text-md-right text-left mb-2" [ngClass]="defaultData.isSearchVisible ? 'offset-md-4' : 'offset-md-6'">
+
+    <button class="btn btn-primary">
+      ADD USER
+    </button>
+
+    <span style="
+    padding: 3%;
+    top: 15%;
+    position: relative;
+    ">
+      <i class="material-icons">note_add</i>
+    </span>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <div class="app-sidebar">
+    <app-sidebar (emitToggleSidebarClass)="toggleMainContainer($event)"></app-sidebar>
+  </div>
+  <div class="main-content" [ngClass]="toggleState ? 'expand-container' : 'collapsed-container'">
+    <app-header></app-header>
+
+    <app-sub-header></app-sub-header>
+
+    <div class="dashboard-wrapper">
+
+      <div class="d-inline-block" style="
+        float: right;
+        margin: auto;
+        position: relative;
+        top: 35%;">
+        <ul style="text-decoration: none;list-style-type: none;padding: 0">
+          <li style="background-color: #f8f8f8">
+            <span class="p-2"> <i class="material-icons" style="color: green;position: relative;top: 5px;">near_me</i></span>
+          </li>
+          <li style="background-color: #f8f8f8">
+            <span class="p-2"> <i class="material-icons" style="color: blueviolet;position: relative;top: 5px;">meeting_room</i></span>
+          </li>
+          <li style="background-color: #f8f8f8">
+            <span class="p-2"> <i class="material-icons" style="color: orange;position: relative;top: 5px;">message</i></span>
+          </li>
+          <li style="background-color: #f8f8f8">
+            <span class="p-2"> <i class="material-icons" style="color: cyan;position: relative;top: 5px;">settings</i></span>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
+  </div>
+</div>
